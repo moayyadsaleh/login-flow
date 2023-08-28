@@ -1,26 +1,26 @@
 import React from "react";
 import "../styles.css";
+import Login from "./Login";
+import InputField from "./Input";
 
 const isLoggedIn = false;
 
-function App() {
+//Create function to render conditionally
+function RenderConditionally() {
   if (isLoggedIn) {
-    return (
-      <div className="container">
-        <h1>Hello</h1>
-      </div>
-    );
+    return <h1>Hello</h1>;
   } else {
-    return (
-      <div className="container">
-        <form className="form">
-          <input type="text" placeholder="Username" />
-          <input type="password" placeholder="Password" />
-          <button type="submit">Login</button>
-        </form>
-      </div>
-    );
+    return <Login />;
   }
+}
+
+function App() {
+  return (
+    <div className="container">
+      {" "}
+      <RenderConditionally />
+    </div>
+  );
 }
 
 export default App;
