@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles.css";
-function Form() {
+
+function Form(props) {
   return (
     <form className="form">
       <input type="text" placeholder="Username" />
