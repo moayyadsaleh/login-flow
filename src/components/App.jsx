@@ -1,7 +1,8 @@
 import React from "react";
 import "../styles.css";
-
-var userIsRegistered = false;
+import Form from "../components/Form";
+import Login from "./Login";
+var userIsRegistered = true;
 
 // Challenge:
 // 1. Show "Login" as the button text if userIsRegistered is true.
@@ -10,24 +11,7 @@ var userIsRegistered = false;
 //    Don't show it if userIsRegistered is true.
 
 function CheckRegisteredUser({ userIsRegistered }) {
-  return (
-    <div>
-      {userIsRegistered ? (
-        <form className="form">
-          <input type="text" placeholder="Username" />
-          <input type="password" placeholder="Password" />
-          <button type="submit">Login</button>
-        </form>
-      ) : (
-        <form className="form">
-          <input type="text" placeholder="Username" />
-          <input type="password" placeholder="Password" />
-          <input type="password" placeholder="Confirm Password" />
-          <button type="submit">Register</button>
-        </form>
-      )}
-    </div>
-  );
+  return <div>{userIsRegistered ? <Login /> : <Form />}</div>;
 }
 
 function App() {
