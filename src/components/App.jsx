@@ -3,23 +3,12 @@ import "../styles.css";
 import Login from "./Login";
 import InputField from "./Input";
 
-const isLoggedIn = false;
+const isLoggedIn = true;
 
-//Create function to render conditionally
-function RenderConditionally() {
-  if (isLoggedIn) {
-    return <h1>Hello</h1>;
-  } else {
-    return <Login />;
-  }
-}
-
+//Now use Ternary Operator
 function App() {
   return (
-    <div className="container">
-      {" "}
-      <RenderConditionally />
-    </div>
+    <div className="container">{isLoggedIn ? <h1>Hello</h1> : <Login />}</div>
   );
 }
 
