@@ -4,7 +4,7 @@ import InputField from "./Input";
 
 function Login() {
   return (
-    <div className="container">
+    <div>
       <form className="form">
         <InputField type="text" placeholder="Username" />
         <InputField type="password" placeholder="Password" />
