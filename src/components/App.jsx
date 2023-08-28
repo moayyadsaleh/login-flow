@@ -1,22 +1,20 @@
 import React from "react";
-import "../styles.css";
-import Login from "./Login";
-import InputField from "./Input";
+import Form from "./Form";
 
-const isLoggedIn = false;
+var userIsRegistered = false;
 
-const currentTime = new Date(2023, 8, 28, 23).getHours();
-console.log(currentTime);
-//{isLoggedIn ? <h1>Hello</h1> : <Login />}
-//Now use Ternary Operator. Note: if it evaluates to true, then do/render soimething. if it evaluates to false, then do/render somethng.
+//Challenge: Without moving the userIsRegistered variable,
+//1. Show Login as the button text if userIsRegistered is true.
+//Show Register as the button text if userIsRegistered is false.
+//2. Only show the Confirm Password input if userIsRegistered is false.
+//Don't show it if userIsRegistered is true.
+
 function App() {
   return (
     <div className="container">
-      {currentTime > 12 && <h1>Why are you still Working?</h1>}
+      <Form />
     </div>
   );
 }
-
-//if I don't want to render something if it evaluates to false:
 
 export default App;
